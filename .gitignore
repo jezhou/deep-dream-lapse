@@ -1,1 +1,3 @@
 .bowerrc
+./public/bower/
+bower/

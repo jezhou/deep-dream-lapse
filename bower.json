@@ -1,0 +1,24 @@
+{
+  "name": "dreamlapse",
+  "version": "0.0.1",
+  "authors": [
+    "Jesse Zhou <jesse.cy.zhou@gmail.com>"
+  ],
+  "description": "Create static galleries using your DeepDream results",
+  "keywords": [
+    "deepdream"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.0.0",
+    "material-design-icons": "~2.0.0"
+  }
+}
