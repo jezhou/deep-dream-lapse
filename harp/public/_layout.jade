@@ -1,0 +1,35 @@
+mixin mdl-header-row(title, ...links)
+  .mdl-layout__header-row
+    if title
+      span.mdl-layout-title 
+        h2= title
+    .mdl-layout-spacer
+    if links
+      nav.mdl-navigation
+        for link in links
+          a.mdl-navigation__link(href="/" + link)= link
+
+doctype
+html
+  head
+    link(rel="stylesheet" href="/bower/material-design-lite/material.min.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    script(src="/bower/material-design-lite/material.min.js")
+    link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700")
+    for stylesheet in public.css._contents
+      link(rel="stylesheet" href="/css/#{ stylesheet }")
+    
+  body
+    .mdl-layout__container
+      .mdl-layout.mdl-js-layout.mdl-layout--overlay-drawer-button.mdl-layout--fixed-header
+        header.mdl-layout__header.mdl-layout__header--waterfall
+          .mdl-layout-icon
+          +mdl-header-row("Dream Lapse", "Home", "About")
+        .mdl-layout__drawer
+          span.mdl-layout-title Simple Layout
+          nav.mdl-navigation
+            a.mdl-navigation__link(href="#") Nav Link 1
+            a.mdl-navigation__link(href="#") Nav Link 2
+            a.mdl-navigation__link(href="#") Nav Link 3
+        main.mdl-layout__content
+          != yield

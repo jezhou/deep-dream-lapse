@@ -1,0 +1,52 @@
+mixin mdl-card(title, imgsrc, caption, action)
+  .mdl-cell.mdl-cell--3-col
+    .mdl-card
+      .mdl-card__title
+        .mdl-card__title-text= title
+      .mdl-card__media
+        img(src=imgsrc)
+      .mdl-card__supporting-text
+        p= caption
+      .mdl-card__actions
+        a(href=action)
+
+.mdl-grid
+  +mdl-card(
+    "Standard title",
+    "http://d.ibtimes.co.uk/en/full/1446682/deepdream4.jpg",
+    "This is a caption",
+    ""
+  )
+
+  //- DELETE EVERYTHING BELOW THIS LINE. TESTING PURPOSES ONLY
+
+  +mdl-card(
+    "Standard title",
+    "http://i.imgur.com/MStmKEx.jpg",
+    "This is a caption",
+    ""
+  )
+  +mdl-card(
+    "Standard title",
+    "http://d.ibtimes.co.uk/en/full/1446682/deepdream4.jpg",
+    "This is a caption",
+    ""
+  )
+  +mdl-card(
+    "Standard title",
+    "http://d.ibtimes.co.uk/en/full/1446682/deepdream4.jpg",
+    "This is a caption",
+    ""
+  )
+  +mdl-card(
+    "Standard title",
+    "http://d.ibtimes.co.uk/en/full/1446682/deepdream4.jpg",
+    "This is a caption",
+    ""
+  )
+  +mdl-card(
+    "Standard title",
+    "http://d.ibtimes.co.uk/en/full/1446682/deepdream4.jpg",
+    "This is a caption",
+    ""
+  )
